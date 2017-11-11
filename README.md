@@ -95,8 +95,11 @@ Create your own provider by implementing the `Ruvents\Paginator\Provider\Provide
 ## bootstrap_4.html.twig
 
 ```twig
+{% set route = app.request.attributes.get('_route') %}
+{% set route_params = app.request.attributes.get('_route_params', []) %}
+
 {% embed 'twig/bootstrap_4.html.twig' with {paginator: paginator, show_previous_next: false} %}
-    {% block href path('index', {page: page.first ? null : page.number}) %}
+    {% block href path(route, route_params|merge({page: page.first ? null : page.number})) %}
 
     {% block previous_label 'Предыдущая' %}
 
