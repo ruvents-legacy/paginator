@@ -37,8 +37,8 @@ $paginator = PaginatorBuilder::create()
 
 // template logic
 
-if ($previous = $paginator->getPrevious()) {
-    echo sprintf('<a href="?page=%1$d">Previous</a>', $previous->getNumber());
+if (null !== $previous = $paginator->getPrevious()) {
+    echo sprintf('<a href="?page=%d">Previous</a>', $previous->getNumber());
 }
 
 foreach ($paginator as $section) {
@@ -47,8 +47,8 @@ foreach ($paginator as $section) {
     }
 }
 
-if ($next = $paginator->getNext()) {
-    echo sprintf('<a href="?page=%1$d">Next</a>', $next->getNumber());
+if (null !== $next = $paginator->getNext()) {
+    echo sprintf('<a href="?page=%d">Next</a>', $next->getNumber());
 }
 ```
 
