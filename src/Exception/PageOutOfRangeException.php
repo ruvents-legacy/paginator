@@ -2,7 +2,7 @@
 
 namespace Ruvents\Paginator\Exception;
 
-class CurrentPageOutOfRangeException extends \OutOfRangeException
+class PageOutOfRangeException extends \OutOfRangeException
 {
     public function __construct(int $total, int $current, int $code = 0, \Throwable $previous = null)
     {

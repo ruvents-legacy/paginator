@@ -36,7 +36,7 @@ class PaginatorBuilderTest extends TestCase
     }
 
     /**
-     * @expectedException \Ruvents\Paginator\Exception\CurrentPageOutOfRangeException
+     * @expectedException \Ruvents\Paginator\Exception\PageOutOfRangeException
      * @expectedExceptionMessage Page 2 is out of range [1, 1].
      */
     public function testSetInvalidCurrent()

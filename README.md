@@ -27,7 +27,7 @@ $paginator = PaginatorBuilder::create()
     // required
     ->setProvider(new IterableProvider($data))
     // defaults to 1
-    // when out of range of estimated pages, CurrentPageOutOfRangeException is thrown
+    // when out of range of estimated pages, PageOutOfRangeException is thrown
     ->setCurrent(2)
     // defaults to 2
     ->setProximity(1)

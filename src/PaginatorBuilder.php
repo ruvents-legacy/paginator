@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Ruvents\Paginator;
 
-use Ruvents\Paginator\Exception\CurrentPageOutOfRangeException;
+use Ruvents\Paginator\Exception\PageOutOfRangeException;
 use Ruvents\Paginator\Provider\ProviderInterface;
 
 class PaginatorBuilder
@@ -70,7 +70,7 @@ class PaginatorBuilder
         $total = $this->calculateTotal($totalItems);
 
         if ($this->current < 1 || $this->current > $total) {
-            throw new CurrentPageOutOfRangeException($total, $this->current);
+            throw new PageOutOfRangeException($total, $this->current);
         }
 
         $items = $this->provider->getItems(($this->current - 1) * $this->perPage, $this->perPage);
