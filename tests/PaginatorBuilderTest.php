@@ -20,7 +20,7 @@ class PaginatorBuilderTest extends TestCase
      *
      * @expectedException \InvalidArgumentException
      */
-    public function testSetInvalidPerPage(int $value)
+    public function testInvalidPerPageException(int $value)
     {
         PaginatorBuilder::create()->setPerPage($value);
     }
@@ -30,16 +30,36 @@ class PaginatorBuilderTest extends TestCase
      *
      * @expectedException \InvalidArgumentException
      */
-    public function testSetInvalidProximity(int $value)
+    public function testInvalidProximityException(int $value)
     {
         PaginatorBuilder::create()->setProximity($value);
+    }
+
+    /**
+     * @expectedException \UnexpectedValueException
+     */
+    public function testUnexpectedProviderTotalException()
+    {
+        $provider = $this->getMockBuilder(ProviderInterface::class)
+            ->setMethods(['getTotal', 'getItems'])
+            ->getMock();
+
+        $provider->expects($this->once())
+            ->method('getTotal')
+            ->willReturn(-1);
+
+        /** @var ProviderInterface $provider */
+
+        PaginatorBuilder::create()
+            ->setProvider($provider)
+            ->getPaginator();
     }
 
     /**
      * @expectedException \Ruvents\Paginator\Exception\PageOutOfRangeException
      * @expectedExceptionMessage Page 2 is out of range [1, 1].
      */
-    public function testSetInvalidCurrent()
+    public function testCurrentPageOutOfRangeException()
     {
         $provider = $this->getMockBuilder(ProviderInterface::class)
             ->setMethods(['getTotal', 'getItems'])
@@ -48,9 +68,6 @@ class PaginatorBuilderTest extends TestCase
         $provider->expects($this->once())
             ->method('getTotal')
             ->willReturn(1);
-
-        $provider->expects($this->never())
-            ->method('getItems');
 
         /** @var ProviderInterface $provider */
 

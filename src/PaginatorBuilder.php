@@ -67,6 +67,11 @@ class PaginatorBuilder
         }
 
         $totalItems = $this->provider->getTotal();
+
+        if ($totalItems < 0) {
+            throw new \UnexpectedValueException('Provider::getTotal() must return a non-negative integer.');
+        }
+
         $total = $this->calculateTotal($totalItems);
 
         if ($this->current < 1 || $this->current > $total) {
