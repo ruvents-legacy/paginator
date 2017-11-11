@@ -8,7 +8,7 @@ Some definitions:
 - A `section` is a set of pages, rendered together.
 - `Proximity` is a number of pages, displayed before and after the current page.
 
-For example, for 10 pages with proximity 2 and current page 5 we will have 3 sections with the following page numbers: `[1], [3, 4, 5, 6, 7], [10]`.
+For example, for 10 pages with proximity 2 and current page 5 paginator will have 3 sections with the following page numbers: `[1], [3, 4, 5, 6, 7], [10]`.
 
 When the current page is close to one of the edges sections get merged.
 
