@@ -2,7 +2,7 @@
 
 ## Description
 
-This library provides a convenient way to paginate any data structures.
+This library provides a convenient way to paginate any data structure.
 
 Some definitions:
 - A `section` is a set of pages, rendered together.
@@ -52,7 +52,7 @@ if (null !== $next = $paginator->getNext()) {
 }
 ```
 
-## Built-in data providers
+## Data providers
 
 ### IterableProvider
 
