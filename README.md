@@ -37,6 +37,10 @@ $paginator = PaginatorBuilder::create()
 
 // template logic
 
+foreach ($paginator->getItems() as $item) {
+    // render the item row
+}
+
 if (null !== $previous = $paginator->getPrevious()) {
     echo sprintf('<a href="?page=%d">Previous</a>', $previous->getNumber());
 }
