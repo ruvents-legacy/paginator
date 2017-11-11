@@ -1,4 +1,4 @@
-<ul class="pagination">
+<ul class="pagination {{ class|default }}">
     {% if show_previous_next ?? true %}
         {% set page = paginator.previous %}
         {% if page %}
