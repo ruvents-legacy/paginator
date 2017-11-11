@@ -40,9 +40,7 @@ class PaginatorBuilderTest extends TestCase
      */
     public function testUnexpectedProviderTotalException()
     {
-        $provider = $this->getMockBuilder(ProviderInterface::class)
-            ->setMethods(['getTotal', 'getItems'])
-            ->getMock();
+        $provider = $this->createMock(ProviderInterface::class);
 
         $provider->expects($this->once())
             ->method('getTotal')
@@ -61,9 +59,7 @@ class PaginatorBuilderTest extends TestCase
      */
     public function testCurrentPageOutOfRangeException()
     {
-        $provider = $this->getMockBuilder(ProviderInterface::class)
-            ->setMethods(['getTotal', 'getItems'])
-            ->getMock();
+        $provider = $this->createMock(ProviderInterface::class);
 
         $provider->expects($this->once())
             ->method('getTotal')

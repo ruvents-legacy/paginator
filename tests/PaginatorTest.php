@@ -12,9 +12,7 @@ class PaginatorTest extends TestCase
      */
     public function testBuildSectionsNumber(int $totalItems, int $perPage, int $proximity, int $current, array $expectedPages)
     {
-        $provider = $this->getMockBuilder(ProviderInterface::class)
-            ->setMethods(['getTotal', 'getItems'])
-            ->getMock();
+        $provider = $this->createMock(ProviderInterface::class);
 
         $provider->expects($this->once())
             ->method('getTotal')
