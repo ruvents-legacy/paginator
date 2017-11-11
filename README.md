@@ -85,3 +85,17 @@ $paginator = PaginatorBuilder::create()
 ### Custom
 
 Create your own provider by implementing the `Ruvents\Paginator\Provider\ProviderInterface`.
+
+### Templates
+
+## bootstrap_4.html.twig
+
+```twig
+{% embed '@paginator/bootstrap_4.html.twig' with {paginator: paginator, show_previous_next: false} %}
+    {% block href path('index', {page: page.first ? null : page.number}) %}
+
+    {% block previous_label 'Предыдущая' %}
+
+    {% block next_label 'Следующая' %}
+{% endembed %}
+```

@@ -1,5 +1,5 @@
 <ul class="pagination">
-    {% if previous_next ?? true %}
+    {% if show_previous_next ?? true %}
         {% set page = paginator.previous %}
         {% if page %}
             <li class="page-item">
@@ -27,7 +27,7 @@
             </li>
         {% endif %}
     {% endfor %}
-    {% if previous_next ?? true %}
+    {% if show_previous_next ?? true %}
         {% set page = paginator.next %}
         {% if page %}
             <li class="page-item">
