@@ -90,6 +90,6 @@ class Paginator implements \IteratorAggregate, \Countable
 
     private function createPage(int $number)
     {
-        return new Page($number, 1 === $number, $this->total === $number, $this->current === $number);
+        return new Page($number, $this->current === $number);
     }
 }

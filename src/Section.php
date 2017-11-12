@@ -7,12 +7,20 @@ final class Section implements \IteratorAggregate, \Countable
 {
     private $pages;
 
+    private $last;
+
     /**
      * @param Page[] $pages
      */
-    public function __construct(array $pages)
+    public function __construct(array $pages, bool $last)
     {
         $this->pages = $pages;
+        $this->last = $last;
+    }
+
+    public function isLast(): bool
+    {
+        return $this->last;
     }
 
     /**

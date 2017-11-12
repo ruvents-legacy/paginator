@@ -44,12 +44,13 @@ class PaginatorTest extends TestCase
             $expectedSection = $expectedPages[$sectionI];
             $this->assertSameSize($expectedSection, $section);
 
+            $this->assertSame(count($expectedPages) === $sectionI + 1, $section->isLast());
+
             foreach ($section as $pageI => $page) {
                 $expectedPage = $expectedSection[$pageI];
 
                 $this->assertSame($expectedPage, $page->getNumber());
                 $this->assertSame(1 === $expectedPage, $page->isFirst());
-                $this->assertSame($expectedTotal === $expectedPage, $page->isLast());
                 $this->assertSame($current === $expectedPage, $page->isCurrent());
 
                 if ($current === $expectedPage) {
