@@ -12,11 +12,8 @@ class PaginatorBuilder
      * @var ProviderInterface
      */
     private $provider;
-
     private $current = 1;
-
     private $perPage = 10;
-
     private $proximity = 2;
 
     public static function create()

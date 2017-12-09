@@ -6,7 +6,6 @@ namespace Ruvents\Paginator;
 final class Section implements \IteratorAggregate, \Countable
 {
     private $pages;
-
     private $last;
 
     /**

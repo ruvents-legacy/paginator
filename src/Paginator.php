@@ -6,13 +6,9 @@ namespace Ruvents\Paginator;
 class Paginator implements \IteratorAggregate, \Countable
 {
     private $sections;
-
     private $total;
-
     private $items;
-
     private $totalItems;
-
     private $current;
 
     /**

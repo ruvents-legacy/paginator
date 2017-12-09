@@ -6,7 +6,6 @@ namespace Ruvents\Paginator;
 final class Page
 {
     private $number;
-
     private $current;
 
     public function __construct(int $number, bool $current)
