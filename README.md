@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ruvents/paginator.svg?branch=master)](https://travis-ci.org/ruvents/paginator)
+
 # RUVENTS Paginator
 
 ## Description
