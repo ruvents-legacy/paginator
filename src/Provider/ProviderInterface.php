@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Ruvents\Paginator\Provider;
@@ -15,8 +16,8 @@ interface ProviderInterface
     /**
      * Items for the current page.
      *
-     * @param int $offset The zero-based index of the first item.
-     * @param int $limit  The current page limit (actually equals the $perPage value).
+     * @param int $offset the zero-based index of the first item
+     * @param int $limit  the current page limit (actually equals the $perPage value)
      *
      * @return iterable
      */

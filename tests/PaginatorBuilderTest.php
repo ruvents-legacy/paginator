@@ -46,7 +46,7 @@ class PaginatorBuilderTest extends TestCase
             ->method('getTotal')
             ->willReturn(-1);
 
-        /** @var ProviderInterface $provider */
+        /* @var ProviderInterface $provider */
 
         PaginatorBuilder::create()
             ->setProvider($provider)
@@ -65,7 +65,7 @@ class PaginatorBuilderTest extends TestCase
             ->method('getTotal')
             ->willReturn(1);
 
-        /** @var ProviderInterface $provider */
+        /* @var ProviderInterface $provider */
 
         PaginatorBuilder::create()
             ->setProvider($provider)

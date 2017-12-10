@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Ruvents\Paginator;
@@ -69,7 +70,7 @@ class PaginatorBuilder
             throw new \UnexpectedValueException('Provider::getTotal() must return a non-negative integer.');
         }
 
-        $total = (int)ceil($totalItems / $this->perPage) ?: 1;
+        $total = (int) ceil($totalItems / $this->perPage) ?: 1;
 
         if ($this->current < 1 || $this->current > $total) {
             throw new PageOutOfRangeException($total, $this->current);
@@ -116,7 +117,7 @@ class PaginatorBuilder
     {
         $pages = [];
 
-        for ($number = $firstPage; $number <= $lastPage; $number++) {
+        for ($number = $firstPage; $number <= $lastPage; ++$number) {
             $pages[] = new Page($number, $this->current === $number);
         }
 
