@@ -1,3 +1,8 @@
+[![Packagist](https://img.shields.io/packagist/l/ruvents/paginator.svg)](LICENSE)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/ruvents/paginator.svg)](https://packagist.org/packages/ruvents/paginator)
+[![Packagist](https://img.shields.io/packagist/v/ruvents/paginator.svg)](https://packagist.org/packages/ruvents/paginator)
+[![Packagist](https://img.shields.io/packagist/dt/ruvents/paginator.svg)](https://packagist.org/packages/ruvents/paginator)
+
 [![Build Status](https://travis-ci.org/ruvents/paginator.svg?branch=master)](https://travis-ci.org/ruvents/paginator)
 [![StyleCI](https://styleci.io/repos/110376774/shield?branch=master)](https://styleci.io/repos/110376774)
 
