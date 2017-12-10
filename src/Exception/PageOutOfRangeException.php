@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ruvents\Paginator\Exception;
 
 class PageOutOfRangeException extends \OutOfRangeException

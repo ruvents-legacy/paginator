@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ruvents\Paginator;
 
 use PHPUnit\Framework\TestCase;
@@ -10,7 +12,7 @@ class PaginatorBuilderTest extends TestCase
     /**
      * @expectedException \LogicException
      */
-    public function testNoProvider()
+    public function testNoProvider(): void
     {
         PaginatorBuilder::create()->getPaginator();
     }
@@ -20,7 +22,7 @@ class PaginatorBuilderTest extends TestCase
      *
      * @expectedException \InvalidArgumentException
      */
-    public function testInvalidPerPageException(int $value)
+    public function testInvalidPerPageException(int $value): void
     {
         PaginatorBuilder::create()->setPerPage($value);
     }
@@ -30,7 +32,7 @@ class PaginatorBuilderTest extends TestCase
      *
      * @expectedException \InvalidArgumentException
      */
-    public function testInvalidProximityException(int $value)
+    public function testInvalidProximityException(int $value): void
     {
         PaginatorBuilder::create()->setProximity($value);
     }
@@ -38,7 +40,7 @@ class PaginatorBuilderTest extends TestCase
     /**
      * @expectedException \UnexpectedValueException
      */
-    public function testUnexpectedProviderTotalException()
+    public function testUnexpectedProviderTotalException(): void
     {
         $provider = $this->createMock(ProviderInterface::class);
 
@@ -57,7 +59,7 @@ class PaginatorBuilderTest extends TestCase
      * @expectedException \Ruvents\Paginator\Exception\PageOutOfRangeException
      * @expectedExceptionMessage Page 2 is out of range [1, 1].
      */
-    public function testCurrentPageOutOfRangeException()
+    public function testCurrentPageOutOfRangeException(): void
     {
         $provider = $this->createMock(ProviderInterface::class);
 

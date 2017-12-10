@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ruvents\Paginator\Provider;
 
 use PHPUnit\Framework\TestCase;
@@ -9,7 +11,7 @@ class IterableProviderTest extends TestCase
     /**
      * @dataProvider getData
      */
-    public function testProvider(iterable $data, int $offset, int $limit, array $expectedItems)
+    public function testProvider(iterable $data, int $offset, int $limit, array $expectedItems): void
     {
         $provider = new IterableProvider($data);
 
