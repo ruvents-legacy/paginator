@@ -23,7 +23,6 @@ class PaginatorTest extends TestCase
             ->willReturn($expectedItems = range(1, random_int(2, 100)));
 
         /** @var ProviderInterface $provider */
-
         $paginator = PaginatorBuilder::create()
             ->setProvider($provider)
             ->setProximity($proximity)

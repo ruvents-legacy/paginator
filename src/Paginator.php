@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Ruvents\Paginator;
@@ -24,7 +25,7 @@ class Paginator implements \IteratorAggregate, \Countable
     }
 
     /**
-     * The total number of pages
+     * The total number of pages.
      *
      * @return int
      */
