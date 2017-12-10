@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ruvents/paginator.svg?branch=master)](https://travis-ci.org/ruvents/paginator)
+[![StyleCI](https://styleci.io/repos/110376774/shield?branch=master)](https://styleci.io/repos/110376774)
 
 # RUVENTS Paginator
 
