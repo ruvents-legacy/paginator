@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ruvents\Paginator;
 
 use PHPUnit\Framework\TestCase;
@@ -10,7 +12,7 @@ class PaginatorTest extends TestCase
     /**
      * @dataProvider getBuiltSectionsCounts
      */
-    public function testBuildSectionsNumber(int $totalItems, int $perPage, int $proximity, int $current, array $expectedPages)
+    public function testBuildSectionsNumber(int $totalItems, int $perPage, int $proximity, int $current, array $expectedPages): void
     {
         $provider = $this->createMock(ProviderInterface::class);
 
