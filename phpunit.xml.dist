@@ -12,7 +12,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Ruvents Paginator Test Suite">
+        <testsuite name="Ruwork Paginator Test Suite">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

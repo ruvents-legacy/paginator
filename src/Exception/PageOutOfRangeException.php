@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ruvents\Paginator\Exception;
+namespace Ruwork\Paginator\Exception;
 
 class PageOutOfRangeException extends \OutOfRangeException
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ruvents\Paginator;
+namespace Ruwork\Paginator;
 
-use Ruvents\Paginator\Exception\PageOutOfRangeException;
-use Ruvents\Paginator\Provider\ProviderInterface;
+use Ruwork\Paginator\Exception\PageOutOfRangeException;
+use Ruwork\Paginator\Provider\ProviderInterface;
 
 class PaginatorBuilder
 {

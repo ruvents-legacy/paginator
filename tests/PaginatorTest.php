@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ruvents\Paginator;
+namespace Ruwork\Paginator;
 
 use PHPUnit\Framework\TestCase;
-use Ruvents\Paginator\Provider\ProviderInterface;
+use Ruwork\Paginator\Provider\ProviderInterface;
 
 class PaginatorTest extends TestCase
 {

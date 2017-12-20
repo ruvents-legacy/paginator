@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ruvents\Paginator\Provider;
+namespace Ruwork\Paginator\Provider;
 
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\Paginator;

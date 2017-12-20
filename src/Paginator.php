@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ruvents\Paginator;
+namespace Ruwork\Paginator;
 
 class Paginator implements \IteratorAggregate, \Countable
 {

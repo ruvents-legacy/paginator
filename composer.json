@@ -1,6 +1,6 @@
 {
-    "name": "ruvents/paginator",
-    "description": "RUVENTS Paginator",
+    "name": "ruwork/paginator",
+    "description": "Ruwork Paginator",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ruvents\\Paginator\\": "src/"
+            "Ruwork\\Paginator\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ruvents\\Paginator\\": "tests/"
+            "Ruwork\\Paginator\\": "tests/"
         }
     },
     "require": {

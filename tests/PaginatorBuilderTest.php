@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ruvents\Paginator;
+namespace Ruwork\Paginator;
 
 use PHPUnit\Framework\TestCase;
-use Ruvents\Paginator\Provider\ProviderInterface;
+use Ruwork\Paginator\Provider\ProviderInterface;
 
 class PaginatorBuilderTest extends TestCase
 {
@@ -56,7 +56,7 @@ class PaginatorBuilderTest extends TestCase
     }
 
     /**
-     * @expectedException \Ruvents\Paginator\Exception\PageOutOfRangeException
+     * @expectedException \Ruwork\Paginator\Exception\PageOutOfRangeException
      * @expectedExceptionMessage Page 2 is out of range [1, 1].
      */
     public function testCurrentPageOutOfRangeException(): void
