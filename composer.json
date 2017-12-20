@@ -11,13 +11,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ruwork\\Paginator\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Ruwork\\Paginator\\": "tests/"
-        }
+            "Ruwork\\Paginator\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
     },
     "require": {
         "php": "^7.1"

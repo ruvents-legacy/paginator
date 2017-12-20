@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ruwork\Paginator\Provider;
+namespace Ruwork\Paginator\Test\Provider;
 
 use PHPUnit\Framework\TestCase;
 
